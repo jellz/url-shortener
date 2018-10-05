@@ -9,7 +9,7 @@ const r = module.exports.r = require('rethinkdbdash')({ db: 'jlzfun' });
 
 app.use(require('morgan')('dev'));
 app.use(express.json());
-app.use(cors({ origin: 'https://jlz.fun' }));
+app.use(cors());
 
 app.use('/api/links', require('./routes/links.js'));
 

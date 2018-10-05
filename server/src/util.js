@@ -15,16 +15,15 @@ exports.handleJoi = (schema, req, res) => {
   } else return true;
 }
 
-exports.shortUrlExists = async (shortUrl) => {
+exports.getLinkById = async (shortUrl) => {
   const link = await r.table('links').get(shortUrl).run();
-  if (!link) return false;
-  return true;
+  return link;
 }
 
 exports.generateLinkId = async () => {
   async function gen(length) {
     id = require('randomstring').generate(length);
-    if (await exports.shortUrlExists(id)) return gen(length);
+    if (await exports.getLinkById(id)) return gen(length);
     return id;
   }
   var length = Math.floor(Math.random() * (8 - 1 + 1)) + 1;
