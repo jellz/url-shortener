@@ -1,0 +1,17 @@
+{
+  "name": "jlz.fun-api",
+  "version": "1.0.0",
+  "description": "url shortener api",
+  "main": "src/index.js",
+  "author": "Daniel Gulic <danielgulic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-rate-limit": "^3.2.0",
+    "joi": "^13.7.0",
+    "morgan": "^1.9.1",
+    "randomstring": "^1.1.5",
+    "rethinkdbdash": "^2.3.31"
+  }
+}
