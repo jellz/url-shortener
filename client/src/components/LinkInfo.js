@@ -43,6 +43,10 @@ class LinkInfo extends Component {
             <Table.Cell>Redirect link</Table.Cell>
             <Table.Cell><a href={this.state.link.long}>{this.state.link.long}</a></Table.Cell>
           </Table.Row>
+          <Table.Row>
+            <Table.Cell>Total views</Table.Cell>
+            <Table.Cell>{this.state.link.totalViews}</Table.Cell>
+          </Table.Row>
         </Table>}
       </div>
     );
