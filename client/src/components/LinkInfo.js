@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Message } from 'semantic-ui-react';
+import { Table, Message, Icon } from 'semantic-ui-react';
 import { API_BASE } from '../index';
 
 class LinkInfo extends Component {
@@ -25,7 +25,8 @@ class LinkInfo extends Component {
   render() {
     return (
       <div>
-        {!this.state.link && <Message error>
+        {!this.state.link && <Message error icon>
+          <Icon name='dont' />
           <Message.Header>Link not found</Message.Header>
           <p>Are you sure you have the correct link? jlz.fun links are typically 1-8 characters long and are case-sensitive</p>
         </Message>}
