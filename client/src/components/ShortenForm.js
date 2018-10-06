@@ -57,7 +57,12 @@ class ShortenForm extends Component {
           {this.state.linkId !== null && <Message 
             success
             header='Link shortened'
-            content={<div>Your shortened link: <a href={`https://jlz.fun/${this.state.linkId}`}>https://jlz.fun/{this.state.linkId}</a></div>}
+            content={
+            <div>
+              Your shortened link: <a href={`https://jlz.fun/${this.state.linkId}`}>https://jlz.fun/{this.state.linkId}</a>
+              <br />
+              <strong>ProTip!</strong> You can view a link's information by going to <a href={`https://jlz.fun/${this.state.linkId}/info`}>https://jlz.fun/{this.state.linkId}/<strong>info</strong></a>
+            </div>}
           />}
           <Button type='submit'>Shorten!</Button>
         </Form>
