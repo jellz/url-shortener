@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import Home from './components/Home';
 import LinkRedirect from './components/LinkRedirect';
+import LinkInfo from './components/LinkInfo';
 
 class Router extends Component {
   render() {
@@ -11,7 +12,8 @@ class Router extends Component {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/:lid" component={LinkRedirect} />
+              <Route exact path="/:lid" component={LinkRedirect} />
+              <Route exact path="/:lid/info" component={LinkInfo} />
             </Switch>
           </div>
         </div>

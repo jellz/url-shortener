@@ -23,7 +23,8 @@ router.post('/', async (req, res) => {
   const link = {
     id: req.body.short,
     long: req.body.long,
-    createdAt: Date.now()
+    createdAt: Date.now(),
+    totalViews: 0
   }
   await r.table('links').insert(link);
   res.json({ ok: true, link });
@@ -33,4 +34,5 @@ router.get('/:id', async (req, res) => {
   const link = await getLinkById(req.params.id);
   if (!link) return res.status(404).json({ ok: false, error: 'LinkRetrievalError', details: ['Invalid link id'] });
   res.json({ ok: true, link });
+  await r.table('links').get(req.params.id).update({ totalViews: r.row('totalViews').add(1) }).run();
 });
