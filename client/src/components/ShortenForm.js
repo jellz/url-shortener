@@ -49,14 +49,14 @@ class ShortenForm extends Component {
             <label>jlz.fun/</label>
             <input onChange={this.handleShortChange} type='text' placeholder='url-shortener' maxLength='20' />
           </Form.Field>
-          {this.state.errorText !== null && <Message 
-            error
+          {this.state.errorText !== null && <Message error
             header='An error occurred'
             content={this.state.errorText}
+            icon='dont'
           />}
-          {this.state.linkId !== null && <Message 
-            success
+          {this.state.linkId !== null && <Message success
             header='Link shortened'
+            icon='checkmark'
             content={
             <div>
               Your shortened link: <a href={`https://jlz.fun/${this.state.linkId}`}>https://jlz.fun/{this.state.linkId}</a>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Message, Icon } from 'semantic-ui-react';
 import { API_BASE } from '../index';
 
 class LinkRedirect extends Component {
@@ -6,8 +7,7 @@ class LinkRedirect extends Component {
     super(props);
 
     this.state = { 
-      link: null,
-      text: 'Please wait while you are redirected...'
+      link: null
     };
     this.lid = this.props.match.params.lid;
   }
@@ -16,8 +16,9 @@ class LinkRedirect extends Component {
     const res = await fetch(API_BASE + '/api/links/' + this.lid);
     const json = await res.json();
     if (!json.ok) {
-      this.setState({ text: json.details[0] });
+      this.setState({ link: null });
     } else {
+      this.setState({ link: json.link });
       window.location.replace(json.link.long);
     }
   }
@@ -25,7 +26,16 @@ class LinkRedirect extends Component {
   render() {
     return (
       <div>
-        {this.state.text}
+        {!this.state.link && <Message error icon>
+          <Icon name='dont' />
+          <Message.Header>Link not found</Message.Header>
+          <p>Are you sure you have the correct link? jlz.fun links are typically 1-8 characters long and are case-sensitive</p>
+        </Message>}
+        {this.state.link && <Message success icon>
+          <Icon name='circle notched' loading />
+          <Message.Header>Redirecting...</Message.Header>
+          <p>You are now being redirected to your destination</p>
+        </Message>}
       </div>
     );
   }
