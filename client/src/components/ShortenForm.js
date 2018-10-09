@@ -17,14 +17,22 @@ class ShortenForm extends Component {
     this.handleShortChange = (e) => this.setState({ short: e.target.value.trim() === '' ? null : e.target.value.trim() });
     this.handleSubmit = async (e) => {
       e.preventDefault();
+     
       this.setState({ errorText: null, linkId: null });
+      
+      let { long } = this.state;
+      
+      if (!long.match(/^https?:/)) {
+          long = `http://${long}`;
+      }
+      
       const res = await fetch(API_BASE + '/api/links', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          long: this.state.long,
+          long,
           short: this.state.short
         })
       });
