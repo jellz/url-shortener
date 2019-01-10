@@ -1,5 +1,5 @@
 {
-  "name": "jlz.fun-api",
+  "name": "url-shortener-api",
   "version": "1.0.0",
   "description": "url shortener api",
   "main": "src/index.js",
