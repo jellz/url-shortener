@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "url shortener api",
   "main": "src/index.js",
-  "author": "Daniel Gulic <danielgulic@gmail.com>",
+  "author": "Daniel <jellzalt@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.4",
