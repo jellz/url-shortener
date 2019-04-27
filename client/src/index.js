@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const API_BASE = process.env.NODE_ENV === 'development'
-  ? 'http://localhost:3000' : 'https://pub-url-shortener-api.jlz.fun';
+const API_BASE = '/api';
 
 export { API_BASE };
 
