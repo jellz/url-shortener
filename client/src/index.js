@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const API_BASE = '/';
+const API_BASE = window.origin;
 
 export { API_BASE };
 
