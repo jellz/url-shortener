@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 const API_BASE = process.env.NODE_ENV === 'development'
-  ? 'http://localhost:3000' : 'https://url-shortener-api.jlz.fun';
+  ? 'http://localhost:3000' : 'https://pub-url-shortener-api.jlz.fun';
 
 export { API_BASE };
 
