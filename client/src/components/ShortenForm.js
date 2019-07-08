@@ -64,7 +64,7 @@ class ShortenForm extends Component {
             />
           </Form.Field>
           <Form.Field inline>
-            <label>jlz.fun/</label>
+            <label>u.jlz.fun/</label>
             <input
               onChange={this.handleShortChange}
               type='text'
