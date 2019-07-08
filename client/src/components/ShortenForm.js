@@ -88,14 +88,14 @@ class ShortenForm extends Component {
               content={
                 <div>
                   Your shortened link:{' '}
-                  <a href={`https://jlz.fun/${this.state.linkId}`}>
-                    https://jlz.fun/{this.state.linkId}
+                  <a href={`https://u.jlz.fun/${this.state.linkId}`}>
+                    https://u.jlz.fun/{this.state.linkId}
                   </a>
                   <br />
                   <strong>ProTip!</strong> You can view a link's information by
                   going to{' '}
-                  <a href={`https://jlz.fun/${this.state.linkId}/info`}>
-                    https://jlz.fun/{this.state.linkId}/<strong>info</strong>
+                  <a href={`https://u.jlz.fun/${this.state.linkId}/info`}>
+                    https://u.jlz.fun/{this.state.linkId}/<strong>info</strong>
                   </a>
                 </div>
               }
