@@ -51,7 +51,7 @@ class ShortenForm extends Component {
         <Form onSubmit={this.handleSubmit} error={true} success={true}>
           <Form.Field required>
             <label>Original link</label>
-            <input onChange={this.handleLongChange} type='text' placeholder='https://github.com/danielgulic/url-shortener' />
+            <input onChange={this.handleLongChange} type='text' placeholder='https://github.com/jellz/url-shortener' />
           </Form.Field>
           <Form.Field inline>
             <label>jlz.fun/</label>
