@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const API_BASE = 'https://urlapipublic.jlz.fun'
+const API_BASE = 'https://urlapipublic.jlz.fun';
 
 export { API_BASE };
 

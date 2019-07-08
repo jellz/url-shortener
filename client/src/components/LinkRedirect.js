@@ -6,7 +6,7 @@ class LinkRedirect extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
       link: null
     };
     this.lid = this.props.match.params.lid;
@@ -26,16 +26,23 @@ class LinkRedirect extends Component {
   render() {
     return (
       <div>
-        {!this.state.link && <Message error icon>
-          <Icon name='dont' />
-          <Message.Header>Link not found</Message.Header>
-          <p>Are you sure you have the correct link? jlz.fun links are typically 1-8 characters long and are case-sensitive</p>
-        </Message>}
-        {this.state.link && <Message success icon>
-          <Icon name='circle notched' loading />
-          <Message.Header>Redirecting...</Message.Header>
-          <p>You are now being redirected to your destination</p>
-        </Message>}
+        {!this.state.link && (
+          <Message error icon>
+            <Icon name='dont' />
+            <Message.Header>Link not found</Message.Header>
+            <p>
+              Are you sure you have the correct link? jlz.fun links are
+              typically 1-8 characters long and are case-sensitive
+            </p>
+          </Message>
+        )}
+        {this.state.link && (
+          <Message success icon>
+            <Icon name='circle notched' loading />
+            <Message.Header>Redirecting...</Message.Header>
+            <p>You are now being redirected to your destination</p>
+          </Message>
+        )}
       </div>
     );
   }

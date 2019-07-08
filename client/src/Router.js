@@ -9,11 +9,11 @@ class Router extends Component {
     return (
       <BrowserRouter>
         <div>
-          <div className="container">
+          <div className='container'>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/:lid" component={LinkRedirect} />
-              <Route exact path="/:lid/info" component={LinkInfo} />
+              <Route exact path='/' component={Home} />
+              <Route exact path='/:lid' component={LinkRedirect} />
+              <Route exact path='/:lid/info' component={LinkInfo} />
             </Switch>
           </div>
         </div>
